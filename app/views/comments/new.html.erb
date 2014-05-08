@@ -1,37 +1,57 @@
-<h1>Comments</h1>
-<% if flash[:notice] -%>
-  <p class='notice'><%=h flash[:notice] %></p>
-<% end -%>
+<script type="text/javascript">
+    $(document).ready(function() {
+		if (Math.random() > 0.5) {
+			$('body').css('background-image', 'url(/background1.jpg)');
+		}
+    });
+</script>
 
-<% if @comment.errors.any? %>
-  <div id="error_explanation">
-    <h2><%= pluralize(@comment.errors.count, "error") %> prohibited
-      this comment from being saved:</h2>
-    <ul>
-    <% @comment.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
-<% end %>
 
-<%= form_for :comment, url: comments_path do |f| %>
-  <p>
-    <%= f.label :email %> *<br>
-    <%= f.text_field :email %>
-  </p>
+<div id="white-container">
+	<h1><a href="/"><img src="/logo.png" alt="Stuff Mapper" /></a></h1>
 
-  <p>
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </p>
- 
-  <p>
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
-<% end %>
+	<div class="big-container">
+		As we build the most environmentally competent and intuitive way for people to exchange free stuff such as couches, TVs, and pianos...
+	</div>
+
+	<div id="blue-container">
+		<h2>You Email Gives Us Reason To Live!</h2>
+
+		<%= form_for :comment, url: comments_path do |f| %>
+			<%= f.text_field :email , :placeholder => "Email" %>
+			<%= f.submit "submit" %>
+		<% end %>
+
+		<div id="asure">
+			(It's safe with us. We won't share it with anyone.)
+		</div>
+
+		<% if flash[:notice] -%>
+          <p class="notice"><%=h flash[:notice] %></p>
+        <% end -%>
+
+		<% if @comment.errors.any? %>
+		  <div id="error_explanation">
+			<h2><%= pluralize(@comment.errors.count, "error") %> prohibited
+			  this comment from being saved:</h2>
+			<ul>
+			<% @comment.errors.full_messages.each do |msg| %>
+			  <li><%= msg %></li>
+			<% end %>
+			</ul>
+		  </div>
+		<% end %>
+	</div>
+
+	<div class="big-container">
+		You could be a part of a movement that puts you, your friends, and your neighbors at the heart of positive environmental change!
+    </div>
+
+	<div class="big-container">
+		And we'll email you when we are ready to show how our mobile app and website help you find what you need and list what you don't, in the easiest, fastest way.
+    </div>
+
+	<div class="big-container">
+		People and the Environment win big as free stuff is repurposed.
+    </div>
+</div>

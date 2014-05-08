@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
 
     if @comment.save
-	  flash[:notice] = 'Comment successfully submited. Thanks about that ;-)'
+	  flash[:notice] = 'Email successfully submited. Thanks about that ;-)'
       redirect_to  action: 'new'
 	else
 	  render 'new'
