@@ -15,7 +15,7 @@
 	</div>
 
 	<div id="blue-container">
-		<h2>You Email Gives Us Reason To Live!</h2>
+		<h2>Your Email Gives Us Reason to Live!</h2>
 
 		<%= form_for :comment, url: comments_path do |f| %>
 			<%= f.text_field :email , :placeholder => "Email" %>
@@ -32,8 +32,8 @@
 
 		<% if @comment.errors.any? %>
 		  <div id="error_explanation">
-			<h2><%= pluralize(@comment.errors.count, "error") %> prohibited
-			  this comment from being saved:</h2>
+			<h3><%= pluralize(@comment.errors.count, "error") %> prohibited
+			  this comment from being saved:</h3>
 			<ul>
 			<% @comment.errors.full_messages.each do |msg| %>
 			  <li><%= msg %></li>
