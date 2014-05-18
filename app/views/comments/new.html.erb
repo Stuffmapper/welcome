@@ -16,19 +16,19 @@
 
 	<div id="blue-container">
 		<h2>Your Email Gives Us Reason to Live!</h2>
-
+        
+        <% if flash[:notice] -%>
+          <p class="notice"><%=h flash[:notice] %></p>
+        <% end -%>
+        
 		<%= form_for :comment, url: comments_path do |f| %>
 			<%= f.text_field :email , :placeholder => "Email" %>
-			<%= f.submit "submit" %>
+			<%= f.submit "Submit" %>
 		<% end %>
 
 		<div id="asure">
 			(It's safe with us. We won't share it with anyone.)
 		</div>
-
-		<% if flash[:notice] -%>
-          <p class="notice"><%=h flash[:notice] %></p>
-        <% end -%>
 
 		<% if @comment.errors.any? %>
 		  <div id="error_explanation">

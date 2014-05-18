@@ -41,15 +41,19 @@ h2 {
 	font-size: 1.3em;
 }
 
+input[type=text] {
+    border: 15px solid #fff;
+}
+
 input[type=submit] {
 	float: right;
-	padding: 5px 25px;
+	padding: 5px 35px;
 	color: #fff;
 	background-color: green;
-	border: 0px;
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
+    border: 15px solid green;
 }
 
 input[type=submit]:hover {
