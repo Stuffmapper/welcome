@@ -46,6 +46,7 @@ input[type=text] {
 }
 
 input[type=submit] {
+    -webkit-appearance: none;
 	float: right;
 	padding: 5px 35px;
 	color: #fff;
