@@ -16,11 +16,21 @@ body {
 	-webkit-border-radius: 20px;
 	-moz-border-radius: 20px;
 	border-radius: 20px;
-	font-size: 1.5em;
+	font-size: 1.4em;
 }
 
 h1 {
 	margin-bottom: 0px;
+}
+
+@media (max-width : 700px) {
+    h1 {
+        text-align: center;
+    }
+
+    #logo {
+        width: 200px;   
+    }
 }
 
 #blue-container {
@@ -73,4 +83,12 @@ input[type=submit]:hover {
 
 .centered {
     text-align: center;
+}
+
+a {
+    color: #005c90;
+}
+
+a:visited {
+    color: green;
 }
