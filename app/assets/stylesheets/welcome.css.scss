@@ -3,92 +3,152 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-	background-image:url("/background0.jpg");
-	background-repeat:repeat;
-	font-family: Arial, Helvetica, sans-serif;
+  margin: 0px;
+  color: #005d8f;
 }
 
-#white-container {
-	background-color: #fff;
-	max-width: 600px;
-	padding: 50px 100px;
-	margin: auto;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-	font-size: 1.4em;
+#super-header {
+  height: 15px;
+  background-color: #fff;
+  border-bottom: 9px solid #51b648;
 }
 
-h1 {
-	margin-bottom: 0px;
+#top-logo {
+  height: 123px;
+  background-color: #fff;
+  text-align: center;
 }
 
-@media (max-width : 700px) {
-    h1 {
-        text-align: center;
-    }
-
-    #logo {
-        width: 200px;   
-    }
+#logo {
+  margin-top: 30px;
 }
 
-#blue-container {
-    background-color: #005c90;
-	max-width: 550px;
-	color: #fff;
-	padding: 25px;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
+#sub-header {
+  height: 38px;
+  line-height: 38px;
+  color: #fff !important;
+  background-color: #51b648;
+  text-align: center;
+}
+
+#main-container {
+  background-image:url("/background.png");
+  background-repeat:repeat;
+  background-position: center 0%;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 150px;
+  padding-bottom: 45px;
+}
+
+#main-content {
+  width: 700px;
+  background-color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 25px;
+}
+
+#main-description {
+  padding:  45px 55px 0 45px;
+  text-align: justify;
+}
+
+#how-it-works-list {
+  list-style-type: none;
+  margin-top: 45px;
+  padding: 0;
+}
+
+#how-it-works-list li {
+  display: inline-block;
+  text-align: center;
+  margin-right: 80px;
+}
+
+#how-it-works-list li span {
+  font-weight: bold;
+}
+
+#how-it-works-list li:last-child {
+  margin-right: 0px;
+}
+
+#sign-up-form {
+  margin: 24px;
+  border: 5px solid #005d8f;
+  padding: 30px;
+}
+
+#sign-up-desc {
+  margin-bottom: 24px;
 }
 
 .field_with_errors {
-	display: inline;
+  display: inline-block;
 }
 
-h2 {
-	font-size: 1.3em;
+#bottom-nav {
+  text-align: center;
+  height: 65px;
+  line-height: 65px;
 }
 
-input[type=text] {
-    border: 15px solid #fff;
+#social-pins {
+  position: relative;
+  top: 20px;
 }
 
-input[type=submit] {
-    -webkit-appearance: none;
-	float: right;
-	padding: 5px 35px;
-	color: #fff;
-	background-color: green;
-	-webkit-border-radius: 20px;
-	-moz-border-radius: 20px;
-	border-radius: 20px;
-    border: 15px solid green;
+
+html {
+  font-size: 17px;
 }
 
-input[type=submit]:hover {
-	cursor:pointer;
+input[type="text"] {
+  height: 34px;
+  width: 408px;
 }
 
-#asure {
-	font-size: 0.7em;
-	margin-top: 25px;
-	text-align: center;
+input[type="submit"] {
+  height: 40px;
+  width: 147px;
+  color: #fff;
+  background-color: #51b648;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border-style: hidden;
+  font-size: 22px;
+  cursor: pointer;
 }
 
-.big-container {
-	margin: 25px 0px;
+::-webkit-input-placeholder {
+  font-style: italic;
 }
 
-.centered {
-    text-align: center;
+:-moz-placeholder {
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  font-style: italic;
 }
 
 a {
-    color: #005c90;
+    color: #005d8f;
+}
+a:visited {
+    color: #51b648;
 }
 
-a:visited {
-    color: green;
+a#white {
+  color: #fff;
+  font-weight: bold;
+}
+
+a#white:visited {
+  color: #fff;
 }

@@ -1,12 +1,71 @@
-<script type="text/javascript">
-    $(document).ready(function() {
-		if (Math.random() > 0.5) {
-			$('body').css('background-image', 'url(/background1.jpg)');
-		}
-    });
-</script>
+<div id="super-header"></div>
 
+<div id="top-logo">
+  <a href="/" id="top-logo-image"><img src="/logo.png" alt="Stuff Mapper" id="logo" /></a>
+</div>
 
+<div id="sub-header">
+  Get ready to give and get stuff fast! <a href="#sign-up" id="white">Sign up</a> to participate in our beta test.
+</div>
+
+<div id="main-container">
+    <div id="main-content">
+      <div id="main-description">
+        <% if flash[:notice] %>
+            <%=h flash[:notice] %><br><br>
+        <% end %>
+
+        <% if @comment.errors.any? %>
+            <div id="error_explanation">
+              <h3><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h3>
+              <ul>
+                <% @comment.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+
+          Every day, people want to give away things like couches, TVs, and odds & ends.
+          Connect to people in your community to get free stuff from your neighbors, and give usable stuff you don't need anymore! <a href="#sign-up" class="sign-up-now-link">Sign up now</a> to start mapping!
+          <ul id="how-it-works-list">
+            <li>
+              <img src="/works-map_10-19.png"><br>
+              Map stuff to <span>give</span> it!
+            </li>
+            <li>
+              <img src="/works-dibs_10-19.png"><br>
+              Dibs stuff to <span>get</span> it!
+            </li>
+            <li>
+              <img src="/works-fast_10-19.png"><br>
+              Get it done <span>fast</span>!
+            </li>
+          </ul>
+      </div>
+      <div id="sign-up-form">
+        <div id="sign-up-desc">New beta version starting soon! Sign up to be notified when spots open!</div>
+
+        <a name="sign-up"></a>
+        <%= form_for :comment, url: comments_path do |f| %>
+            <%= f.text_field :email , :placeholder => "email address" %>
+            <%= f.submit "Sign up!" %>
+        <% end %>
+      </div>
+    </div>
+</div>
+
+<div id="bottom-nav">
+  Connect with us
+  <span id="social-pins">
+    <a class="social-pin" href="https://facebook.com/stuffmapper" target="_blank"><img src="/facebookPin.png" alt="Facebook" title="Facebook"></a>
+    <a class="social-pin" href="https://twitter.com/Stuffmapper" target="_blank"><img src="/twitterPin.png" alt="Twitter" title="Twitter"></a>
+    <a class="social-pin" href="http://pinterest.com/stuffmapper/" target="_blank"><img src="/pinterestPin.png" alt="Pinterest" title="Pinterest"></a>
+    <a class="social-pin" href="http://instagram.com/stuffmapper/" target="_blank"><img src="/instagramPin.png" alt="Instagram" title="Instagram"></a>
+  </span>
+</div>
+
+<!--
 <div id="white-container">
 	<h1><a href="/"><img src="/logo.png" alt="Stuff Mapper" id="logo" /></a></h1>
 
@@ -67,3 +126,4 @@
     </div>
 
 </div>
+-->
